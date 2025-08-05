@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Unite Tests - Backend') {
+        stage('Unit Tests - Backend') {
             agent {
                 docker {
                     image 'snakee/golang-junit:1.21'
-                    args '-e HOME=/tmp -e GOCACHE=/tmp/go-cache'
+                    args '-e HOME=/tmp -e GOCACHE=/tmp/go-cache -e GOMODCACHE=/tmp/go-mod'
                     reuseNode true
                 }
             }
