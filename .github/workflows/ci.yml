@@ -53,7 +53,7 @@ jobs:
           path: bugtracker-backend/test-results.xml
           reporter: jest-junit
 
-  unit-test-frontend:
+  unit-tests-frontend:
     runs-on: ubuntu-latest
     outputs:
       coverage: ${{ steps.test-frontend.outputs.report }}
