@@ -98,5 +98,5 @@ jobs:
           body: |
             ## Backend Test Coverage Report
             ```
-            ${{ need.unit-tests-backend.output.coverage }}
+            ${{ needs.unit-tests-backend.output.coverage }}
             ```
